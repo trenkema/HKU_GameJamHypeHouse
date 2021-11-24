@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - HoldDes
+  - InspectDes
+  - PickUp
+  - LightsTrigger
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - GROUND
+  - PostProcessing
+  - Food
+  - OuterWalls
+  - GROUND1
+  - GROUND2
+  - GROUND3
+  - GROUND4
+  - GROUND5
+  - GROUND6
+  - GROUND7
+  - GROUND8
+  - GROUND9
+  - GROUND10
+  - GROUND11
+  - GROUND12
+  - GROUND13
+  - GROUND14
+  - GROUND15
+  - GROUND16
+  - GROUND17
+  - GROUND18
+  - GROUND19
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
