@@ -28,6 +28,18 @@ public class DialogueTrigger : MonoBehaviour
 
     public FSM fsm;
 
+    bool isPaused = false;
+
+    private void OnEnable()
+    {
+        EventSystemNew<bool>.Subscribe(Event_Type.PAUSED, SetPaused);
+    }
+
+    private void OnDisable()
+    {
+        EventSystemNew<bool>.Unsubscribe(Event_Type.PAUSED, SetPaused);
+    }
+
     private void Start()
     {
         dialogueManager.headText.text = dialogue.name;
@@ -51,12 +63,14 @@ public class DialogueTrigger : MonoBehaviour
         {
             Transform objectHit = hit.transform;
 
-            if (Input.GetMouseButtonDown(0) && !fsm.inPauseMenu)
+            if (Input.GetMouseButtonDown(0) && !isPaused)
             {
                 if (objectHit.gameObject == NPC)
                 {
                     if (dialogueManager.talking == false && needItem == false)
                     {
+                        EventSystemNew<bool>.RaiseEvent(Event_Type.TALKING, true);
+
                         dialogueManager.StartDialogue(dialogue);
                         dialogueManager.headText.enabled = false;
                         talkText.SetActive(false);
@@ -95,6 +109,11 @@ public class DialogueTrigger : MonoBehaviour
                 interp = 0;
             } 
         }
+    }
+
+    private void SetPaused(bool _isPaused)
+    {
+        isPaused = _isPaused;
     }
 
     private void MouseOver()

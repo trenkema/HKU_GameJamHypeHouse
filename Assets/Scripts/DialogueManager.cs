@@ -115,5 +115,7 @@ public class DialogueManager : MonoBehaviour
         talkAudio.Stop();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        EventSystemNew<bool>.RaiseEvent(Event_Type.TALKING, false);
     }
 }

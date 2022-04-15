@@ -62,8 +62,8 @@ MonoBehaviour:
     m_Value: 30
     min: 0
   gaussianMaxRadius:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.5
     min: 0.5
     max: 1.5
   highQualitySampling:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
 --- !u!114 &-940176753756706990
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -155,6 +155,11 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 16
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -162,65 +167,6 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
     min: 0
---- !u!114 &-620264858051717325
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
-  m_Name: ChannelMixer
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  redOutRedIn:
-    m_OverrideState: 1
-    m_Value: 89
-    min: -200
-    max: 200
-  redOutGreenIn:
-    m_OverrideState: 1
-    m_Value: -200
-    min: -200
-    max: 200
-  redOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 200
-    min: -200
-    max: 200
-  greenOutRedIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  greenOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 100
-    min: -200
-    max: 200
-  greenOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutRedIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 100
-    min: -200
-    max: 200
 --- !u!114 &-610289252328065177
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -241,7 +187,7 @@ MonoBehaviour:
     min: -100
     max: 100
   tint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 100
     min: -100
     max: 100
@@ -257,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
@@ -295,7 +241,6 @@ MonoBehaviour:
   - {fileID: -610289252328065177}
   - {fileID: -544989242406005308}
   - {fileID: -8441539072085423051}
-  - {fileID: -620264858051717325}
   - {fileID: -940176753756706990}
 --- !u!114 &8153458355524412452
 MonoBehaviour:
@@ -313,14 +258,14 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -0.5
   contrast:
     m_OverrideState: 1
     m_Value: 0
     min: -100
     max: 100
   colorFilter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 0.8207309, b: 0, a: 1}
     hdr: 1
     showAlpha: 0
